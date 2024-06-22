@@ -7,3 +7,4 @@ print("Bye")
 print(searched_number)
 
 guessed_number = int(input("Guess a number between 1 and 100: "))
+print("Hello again")
