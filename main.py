@@ -8,8 +8,14 @@ print(searched_number)
 
 
 while not is_won:
-    attempts += 1
-    guessed_number = int(input("Guess a number between 1 and 100: "))
+
+    try:
+        guessed_number = int(input("Guess a number between 1 and 100: "))
+        attempts += 1
+    except ValueError:
+        print("Wrong input! Type a whole number.")
+        print("---------------------------------")
+        continue
 
     if guessed_number > searched_number:
         print(f"{guessed_number} is to high!")
