@@ -1,4 +1,5 @@
 import random
+from time import strftime
 
 searched_number = random.randint(1, 100)
 attempts = 0
@@ -24,6 +25,7 @@ while not is_won:
     else:
         print(f"Congratulations. {guessed_number} is correct.")
         print(f"You finished in {attempts} attempts.")
+        print(f"Date: {strftime("%d.%m.%Y")}, Time: {strftime("%H:%M:%S")}")
         is_won = True
 
 print("END")
